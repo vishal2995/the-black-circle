@@ -1,15 +1,45 @@
+[[main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
 
-  [[main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
+[[main]]
+identifier = "solutions"
+name = 'Solutions'
+pageRef = '/posts'
+weight = 20
 
-  [[main]]
-    name = 'Posts'
-    pageRef = '/posts'
-    weight = 20
+[[main]]
+identifier = "uhnws"
+name = "UHNWs & Digital Asset Whales"
+pageRef = '/posts/uhnws'
+weight = 10
+parent = "solutions"
 
-  [[main]]
-    name = 'Tags1'
-    pageRef = '/tags'
-    weight = 30
+[[main]]
+name = "Bitcoin and crypto-backed lending yield strategy custody"
+pageRef = '/posts/uhnws/bcbly'
+weight = 5
+parent = "uhnws"
+
+[[main]]
+name = "Institutions & Family Offices"
+pageRef = '/posts/institutions'
+weight = 20
+parent = "solutions"
+
+[[main]]
+name = "Cryptonative Organisations"
+pageRef = '/posts/cryptonative'
+weight = 30
+parent = "solutions"
+
+[[main]]
+name = 'The Origin'
+pageRef = '/tags'
+weight = 30
+
+[[main]]
+name = 'Request Access'
+pageRef = '/request-access'
+weight = 40

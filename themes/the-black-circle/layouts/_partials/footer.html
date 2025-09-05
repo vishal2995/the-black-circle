@@ -1,1 +1,58 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<footer class="bg-dark text-light pt-4 pb-2 mt-4">
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Description -->
+      <div class="col-md-4 mb-3">
+        <div class="footer-logo">
+          <img src="{{ (resources.Get "images/hugo-logo.png").RelPermalink }}" alt="The Black Circle Logo" class="img-fluid">
+        </div>
+      </div>
+      
+      <!-- Sitemap -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase mb-2">SITEMAP</h6>
+        <ul class="list-unstyled small">
+          <li><a href="{{ "/" | relURL }}" class="text-decoration-none text-light">Home</a></li>
+          <li><a href="{{ "/about/" | relURL }}" class="text-decoration-none text-light">About us</a></li>
+          <li><a href="{{ "/sectors/" | relURL }}" class="text-decoration-none text-light">Sectors</a></li>
+          <li><a href="{{ "/projects/" | relURL }}" class="text-decoration-none text-light">Projects</a></li>
+          <li><a href="{{ "/contact/" | relURL }}" class="text-decoration-none text-light">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase mb-2">CONTACT US</h6>
+        <address class="small mb-0">
+          01454 610066<br>
+          <a href="mailto:contact@theblackcircle.com" class="text-light text-decoration-none">contact@theblackcircle.com</a><br>
+          Address: xxxx
+        </address>
+      </div>
+      
+      <!-- Terms & Follow Us -->
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase mb-2">TERMS</h6>
+        <ul class="list-unstyled small mb-3">
+          <li><a href="{{ "/terms/" | relURL }}" class="text-decoration-none text-light">Terms & Conditions</a></li>
+          <li><a href="{{ "/cookies/" | relURL }}" class="text-decoration-none text-light">Cookies</a></li>
+          <li><a href="{{ "/privacy/" | relURL }}" class="text-decoration-none text-light">Privacy policy</a></li>
+        </ul>
+        </div>
+
+      <div class="col-md-3 mb-3">
+        <h6 class="text-uppercase mb-2">FOLLOW US</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="text-light fs-4" aria-label="X"><i class="bi bi-x-lg"></i></a>
+          <a href="#" class="text-light fs-4" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center small mt-3">
+      *The Black Circle provides sophisticated digital asset management services exclusively to qualified high-net-worth individuals and institutions. All investments involve risk, including potential loss of principal. Past performance does not guarantee future results. Securities offered through licensed partners.*
+    </div>
+    <div class="text-center small mt-2">
+      © {{ now.Year }} All rights reserved. Web Design Grizzlly.
+    </div>
+  </div>
+</footer>

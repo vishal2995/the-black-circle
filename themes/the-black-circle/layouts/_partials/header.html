@@ -1,2 +1,8 @@
 <h1>{{ site.Title }}</h1>
+
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+<div class="header-logo">
+    <img src="{{ "/images/hugo-logo.png" | relURL }}" alt="My Logo">
+</div>
+

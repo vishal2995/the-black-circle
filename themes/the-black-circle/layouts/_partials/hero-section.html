@@ -1,0 +1,22 @@
+<!-- <section id="hero-section" class="position-relative text-light py-5" style="
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+">
+</section> -->
+{{ $bg := resources.Get "images/eye-bg.png" }}
+
+<section id="hero-section" class="position-relative text-light d-flex flex-column justify-content-center align-items-center text-center" style="background: url('{{ $bg.RelPermalink | safeURL }}') no-repeat center center; background-size: cover; height: 100vh;">
+  
+  <img src="{{ "/images/hugo-logo.png" | relURL }}" alt="{{ site.Title }}" class="img-fluid mb-4" style="max-width: 200px;">
+  
+  <p class="lead mb-3">
+    You are invited <a href="https://example.com/request-access">Request Access</a>
+  </p>
+  
+</section>
+
+
+
+
+

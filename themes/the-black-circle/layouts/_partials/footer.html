@@ -20,15 +20,16 @@
         </ul>
       </div>
       
-      <!-- Contact Us -->
-      <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase mb-2">CONTACT US</h6>
-        <address class="small mb-0">
-          01454 610066<br>
-          <a href="mailto:contact@theblackcircle.com" class="text-light text-decoration-none">contact@theblackcircle.com</a><br>
-          Address: xxxx
-        </address>
-      </div>
+     <!-- Contact Us -->
+    <div class="col-md-3 mb-3">
+      <h6 class="text-uppercase mb-2">CONTACT US</h6>
+       {{ .Site.Params.contactNumber }}
+      <address class="small mb-0">
+        <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-light text-decoration-none">{{ .Site.Params.contactEmail }}</a><br>
+        Address: {{ .Site.Params.contactAddress }}
+      </address>
+    </div>
+
       
       <!-- Terms & Follow Us -->
       <div class="col-md-3 mb-3">

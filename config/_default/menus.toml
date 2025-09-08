@@ -1,45 +1,94 @@
 [[main]]
 name = 'Home'
 pageRef = '/'
-weight = 10
+weight = 1
 
 [[main]]
 identifier = "solutions"
-name = 'Solutions'
-pageRef = '/posts'
-weight = 20
+name = "Solutions"
+pageRef = "/solutions"
+weight = 2
 
 [[main]]
 identifier = "uhnws"
 name = "UHNWs & Digital Asset Whales"
-pageRef = '/posts/uhnws'
-weight = 10
+pageRef = "/solutions/uhnws"
+weight = 1
 parent = "solutions"
 
 [[main]]
 name = "Bitcoin and crypto-backed lending yield strategy custody"
-pageRef = '/posts/uhnws/bcbly'
-weight = 5
+pageRef = "/solutions/uhnws/bcbly"
+weight = 1
 parent = "uhnws"
 
 [[main]]
 name = "Institutions & Family Offices"
-pageRef = '/posts/institutions'
-weight = 20
+pageRef = "/solutions/institutions"
+weight = 2
 parent = "solutions"
 
 [[main]]
 name = "Cryptonative Organisations"
-pageRef = '/posts/cryptonative'
-weight = 30
+pageRef = "/solutions/cryptonative"
+weight = 3
 parent = "solutions"
 
 [[main]]
 name = 'The Origin'
 pageRef = '/tags'
-weight = 30
+weight = 3
 
 [[main]]
 name = 'Request Access'
 pageRef = '/request-access'
-weight = 40
+weight = 4
+
+ ##############################
+# Footer Menu Sitemap
+##############################
+
+[[footer]]
+name = 'Home'
+pageRef = '/'
+weight = 1
+
+[[footer]]
+name = 'About Us'
+pageRef = '/about-us'
+weight = 2
+
+[[footer]]
+name = 'Sectors'
+pageRef = '/sectors'
+weight = 3
+
+[[footer]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 4
+
+[[footer]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 5
+
+ ##############################
+# Footer Menu Terms
+##############################
+
+[[terms]]
+name = 'Terms & Conditions'
+pageRef = '/'
+weight = 1
+
+[[terms]]
+name = 'Cookies'
+pageRef = '/about-us'
+weight = 2
+
+[[terms]]
+name = 'Privacy policy'
+pageRef = '/sectors'
+weight = 3
+

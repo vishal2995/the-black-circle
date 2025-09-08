@@ -11,37 +11,16 @@
     <!-- Sitemap -->
     <div class="col-md-2 mb-3">
       <h6 class="text-uppercase mb-2 text-primary">SITEMAP</h6>
-      <ul class="menu">
-        <li><a href="{{ "/" | relURL }}">Home</a></li>
-        <li><a href="{{ "/about/" | relURL }}">About us</a></li>
-        <li><a href="{{ "/sectors/" | relURL }}">Sectors</a></li>
-        <li><a href="{{ "/projects/" | relURL }}">Projects</a></li>
-        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
-      </ul>
+        {{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
     </div>
-    
-    <!-- Contact Us -->
-  <!-- <div class="col-md-3 mb-3">
-    <h6 class="text-uppercase mb-2 text-primary">CONTACT US</h6>
-      {{ .Site.Params.contactNumber }}
-    <address class="small mb-0">
-      <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-light text-decoration-none">{{ .Site.Params.contactEmail }}</a><br>
-      Address: {{ .Site.Params.contactAddress }}
-    </address>
-  </div> -->
-
-    
+        
     <!-- Terms & Follow Us -->
     <div class="col-md-3 mb-3">
       <h6 class="text-uppercase mb-2 text-primary">TERMS</h6>
-      <ul class="menu">
-        <li><a href="{{ "/terms/" | relURL }}">Terms & Conditions</a></li>
-        <li><a href="{{ "/cookies/" | relURL }}">Cookies</a></li>
-        <li><a href="{{ "/privacy/" | relURL }}">Privacy policy</a></li>
-      </ul>
+         {{ partial "menu.html" (dict "menuID" "terms" "page" .) }}
       </div>
 
-    <div class="col-md-3 mb-3">
+    <div class="col-md-3 mb-5">
       <h6 class="text-uppercase mb-2 text-primary">FOLLOW US</h6>
       <div class="d-flex gap-2">
         <a href="#">
@@ -63,6 +42,13 @@
         <a href="#" class="text-light fs-4" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
+      </div>
+      <div>
+        <p>Subscribe for our latest news</p>
+        <form class="d-flex" style="max-width: 400px;">
+          <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+          <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+        </form>
       </div>
     </div>
     <div class="col-12 col-lg-8 offset-lg-4">

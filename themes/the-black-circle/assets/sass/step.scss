@@ -1,0 +1,44 @@
+.step-items {
+    padding: 0 $default-base-spacer * 5;
+    .step-item {
+        .step-item-inner {
+            width: 195px;
+            height: 195px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            margin: 0 auto;
+            span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s ease;
+            }
+            &:hover {
+                span {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                h3 {
+                    background: linear-gradient(280deg, #0C2D2A -31.79%, #B2724A 100.72%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                h6 {
+                    background: linear-gradient(277deg, #0C2D2A -67.53%, #B2724A 100.53%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}

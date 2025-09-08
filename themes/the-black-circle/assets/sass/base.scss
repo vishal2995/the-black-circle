@@ -1,5 +1,16 @@
 body {
-    background-color: $black;
+    background-color: $dark;
+}
+
+.block {
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: ($default-vertical-padding * 0.5) 0;
+	position: relative;
+	@include xl {
+		padding: ($default-vertical-padding) 0;
+	}
 }
 
 

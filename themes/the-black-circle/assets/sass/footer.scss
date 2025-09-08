@@ -1,0 +1,35 @@
+.footer {
+    background: var(--black-gradient, linear-gradient(325deg, #20201E -2.33%, #0F0E0E 90.92%));
+    padding: $default-vertical-padding 0;
+    color: $light;
+    .footer-logo {
+        img {
+            width: 250px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $white;
+        &:hover {
+            color: $primary;
+        }
+    }
+    ul.menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                color: $white;
+            }
+            & + li {
+                margin-top: $default-base-spacer * 0.5;
+            }
+            &:hover {
+                a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

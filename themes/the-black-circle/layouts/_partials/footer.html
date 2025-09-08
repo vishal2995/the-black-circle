@@ -1,59 +1,73 @@
-<footer class="bg-dark text-light pt-4 pb-2 mt-4">
-  <div class="container">
-    <div class="row">
-      <!-- Logo and Description -->
-      <div class="col-md-4 mb-3">
-        <div class="footer-logo">
-          <img src="{{ (resources.Get "images/hugo-logo.png").RelPermalink }}" alt="The Black Circle Logo" class="img-fluid">
-        </div>
+
+<div class="container">
+  <div class="row">
+    <!-- Logo and Description -->
+    <div class="col-12 col-lg-3 offset-lg-1">
+      <div class="footer-logo">
+        <img src="{{ (resources.Get "images/logo-gradient.png").RelPermalink }}" alt="The Black Circle" class="img-fluid">
       </div>
-      
-      <!-- Sitemap -->
-      <div class="col-md-2 mb-3">
-        <h6 class="text-uppercase mb-2">SITEMAP</h6>
-        <ul class="list-unstyled small">
-          <li><a href="{{ "/" | relURL }}" class="text-decoration-none text-light">Home</a></li>
-          <li><a href="{{ "/about/" | relURL }}" class="text-decoration-none text-light">About us</a></li>
-          <li><a href="{{ "/sectors/" | relURL }}" class="text-decoration-none text-light">Sectors</a></li>
-          <li><a href="{{ "/projects/" | relURL }}" class="text-decoration-none text-light">Projects</a></li>
-          <li><a href="{{ "/contact/" | relURL }}" class="text-decoration-none text-light">Contact</a></li>
-        </ul>
-      </div>
-      
-     <!-- Contact Us -->
+    </div>
+    
+    <!-- Sitemap -->
+    <div class="col-md-2 mb-3">
+      <h6 class="text-uppercase mb-2 text-primary">SITEMAP</h6>
+      <ul class="menu">
+        <li><a href="{{ "/" | relURL }}">Home</a></li>
+        <li><a href="{{ "/about/" | relURL }}">About us</a></li>
+        <li><a href="{{ "/sectors/" | relURL }}">Sectors</a></li>
+        <li><a href="{{ "/projects/" | relURL }}">Projects</a></li>
+        <li><a href="{{ "/contact/" | relURL }}">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Contact Us -->
+  <!-- <div class="col-md-3 mb-3">
+    <h6 class="text-uppercase mb-2 text-primary">CONTACT US</h6>
+      {{ .Site.Params.contactNumber }}
+    <address class="small mb-0">
+      <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-light text-decoration-none">{{ .Site.Params.contactEmail }}</a><br>
+      Address: {{ .Site.Params.contactAddress }}
+    </address>
+  </div> -->
+
+    
+    <!-- Terms & Follow Us -->
     <div class="col-md-3 mb-3">
-      <h6 class="text-uppercase mb-2">CONTACT US</h6>
-       {{ .Site.Params.contactNumber }}
-      <address class="small mb-0">
-        <a href="mailto:{{ .Site.Params.contactEmail }}" class="text-light text-decoration-none">{{ .Site.Params.contactEmail }}</a><br>
-        Address: {{ .Site.Params.contactAddress }}
-      </address>
-    </div>
+      <h6 class="text-uppercase mb-2 text-primary">TERMS</h6>
+      <ul class="menu">
+        <li><a href="{{ "/terms/" | relURL }}">Terms & Conditions</a></li>
+        <li><a href="{{ "/cookies/" | relURL }}">Cookies</a></li>
+        <li><a href="{{ "/privacy/" | relURL }}">Privacy policy</a></li>
+      </ul>
+      </div>
 
-      
-      <!-- Terms & Follow Us -->
-      <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase mb-2">TERMS</h6>
-        <ul class="list-unstyled small mb-3">
-          <li><a href="{{ "/terms/" | relURL }}" class="text-decoration-none text-light">Terms & Conditions</a></li>
-          <li><a href="{{ "/cookies/" | relURL }}" class="text-decoration-none text-light">Cookies</a></li>
-          <li><a href="{{ "/privacy/" | relURL }}" class="text-decoration-none text-light">Privacy policy</a></li>
-        </ul>
-        </div>
-
-      <div class="col-md-3 mb-3">
-        <h6 class="text-uppercase mb-2">FOLLOW US</h6>
-        <div class="d-flex gap-2">
-          <a href="#" class="text-light fs-4" aria-label="X"><i class="bi bi-x-lg"></i></a>
-          <a href="#" class="text-light fs-4" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        </div>
+    <div class="col-md-3 mb-3">
+      <h6 class="text-uppercase mb-2 text-primary">FOLLOW US</h6>
+      <div class="d-flex gap-2">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 28 30" fill="none">
+            <g clip-path="url(#clip0_79_16)">
+              <path d="M16.6616 12.2888L27.0852 0.015625H24.6152L15.5643 10.6723L8.33546 0.015625H-0.00219727L10.9293 16.1304L-0.00219727 29.0007H2.46801L12.0259 17.7469L19.6601 29.0007H27.9978L16.661 12.2888H16.6616ZM13.2783 16.2724L12.1707 14.6677L3.35806 1.89919H7.15215L14.2641 12.2038L15.3717 13.8084L24.6163 27.2028H20.8222L13.2783 16.273V16.2724Z" fill="url(#paint0_linear_79_16)"/>
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_79_16" x1="29.431" y1="33.9059" x2="-6.71313" y2="24.5194" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0C2D2A"/>
+                <stop offset="1" stop-color="#B2724A"/>
+              </linearGradient>
+              <clipPath id="clip0_79_16">
+                <rect width="28" height="29" fill="white" transform="translate(-0.00219727 0.015625)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="#" class="text-light fs-4" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
       </div>
     </div>
-    <div class="text-center small mt-3">
-      *The Black Circle provides sophisticated digital asset management services exclusively to qualified high-net-worth individuals and institutions. All investments involve risk, including potential loss of principal. Past performance does not guarantee future results. Securities offered through licensed partners.*
-    </div>
-    <div class="text-center small mt-2">
-      © {{ now.Year }} All rights reserved. Web Design Grizzlly.
+    <div class="col-12 col-lg-8 offset-lg-4">
+      <p class="small mt-3"><em>The Black Circle provides sophisticated digital asset management services exclusively to qualified high-net-worth individuals and institutions. All investments involve risk, including potential loss of principal. Past performance does not guarantee future results. Securities offered through licensed partners.</em></p>
+      <p class="small mt-2">&copy; {{ now.Year }} MLG UK Ltd. All rights reserved. <a href="https://www.wearegrizzly.com/" target="_blank">Web Design Grizzly</a>.</p>
     </div>
   </div>
-</footer>
+</div>

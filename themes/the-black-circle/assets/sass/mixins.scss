@@ -1,0 +1,30 @@
+@mixin sm {
+  @media ( #{$sm} ) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media ( #{$md} ) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media ( #{$lg} ) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media ( #{$xl} ) {
+      @content;
+  }
+}
+
+@mixin xxl {
+  @media ( #{$xxl} ) {
+      @content;
+  }
+}
+

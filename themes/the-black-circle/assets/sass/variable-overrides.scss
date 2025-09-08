@@ -1,8 +1,16 @@
 // Default variable overrides
 
+$default-base-spacer: 1rem;
+
+$sm : 'min-width: 576px';
+$md : 'min-width: 768px';
+$lg : 'min-width: 992px';
+$xl : 'min-width: 1200px';
+$xxl : 'min-width: 1400px';
+
 // scss-docs-start theme-color-variables
-$primary:       #0d6efd;
-$secondary:     #6c757d;
+$primary:       #B2724A;
+$secondary:     #0C2D2A;
 $success:       #198754;
 $info:          #0dcaf0;
 $warning:       #ffc107;
@@ -10,7 +18,3 @@ $danger:        #dc3545;
 $light:         #f8f9fa;
 $dark:          #212529;
 // scss-docs-end theme-color-variables
-
-// Your variable overrides
-$body-bg: #fff;
-$body-color: #212529;

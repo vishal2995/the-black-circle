@@ -8,5 +8,10 @@
 @import "bootstrap/bootstrap.scss";
 
 // Then add additional custom code here
-@import "custom.scss"; // Theme SASS
-@import "styles.scss"; // Site SASS (assets/sass/styles.scss)
+@import "mixins.scss";
+@import "base.scss";
+@import "buttons.scss"; 
+@import "typography.scss";
+@import "header.scss";
+@import "footer.scss";
+

@@ -33,3 +33,22 @@
         }
     }
 }
+
+.subscribe-form {
+    gap: $default-base-spacer * 0.5;
+    .form-control {
+        height: 48px;
+        background-color: transparent;
+        border: 1px solid rgba($white, 0.2);
+        border-radius: 6px;
+        color: rgba($white, 0.85);
+        &::placeholder {
+            color: rgba($white, 0.85);    
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: $primary;
+        }
+    }
+}

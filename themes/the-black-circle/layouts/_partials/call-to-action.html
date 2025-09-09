@@ -1,17 +1,19 @@
-<section class="call-to-action py-5 bg-dark text-light">
+<section class="block call-to-action">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Column -->
-      <div class="col-md-6">
-           <h2 class="text-primary mb-3">YOUR TIME TO ENTER THE CIRCLE</h2>
-            <p class="mb-4">
-            If you are ready to experience exclusive, tailored financial services unlike anything before, with trusted partners who listen, understand, and stand by your side to secure and amplify your wealth, then it’s time to take the next step.
-            </p>
-            <a href="" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
-      </div>
-      <!-- Right Column -->
-      <div class="col-md-6 text-center mb-4 mb-md-0">
-           <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-fluid">
+    <div class="w-100 call-to-action-inner p-5 position-relative d-flex">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-md-6 pe-5">
+            <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
+              <p class="mb-4 text-light text-large">If you are ready to experience exclusive, tailored financial services unlike anything before, with trusted partners who listen, understand, and stand by your side to secure and amplify your wealth, then it's time to take the next step.</p>
+              <div class="d-flex pt-4">
+                <a href="#" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
+              </div>
+        </div>
+        <!-- Right Column -->
+        <div class="col-md-6 call-to-action-pic">
+            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+        </div>
       </div>
     </div>
   </div>

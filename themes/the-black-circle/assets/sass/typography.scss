@@ -1,3 +1,8 @@
+body, p {
+	font-family: $body-font;
+	font-weight: $font-weight-light;
+	line-height: 1.75;
+}
 .text-primary {
     background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
     background-clip: text;
@@ -12,9 +17,16 @@
     -webkit-text-fill-color: transparent;
 }
 
+.text-large, .text-large p {
+	font-size: $font-size-base * 1.125;
+}
+
+a {
+	text-decoration: none;
+}
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: $body-font;
+	font-family: $heading-font;
 	font-weight: $font-weight-normal;
 	margin-bottom: $default-base-spacer;
 	color: $white;

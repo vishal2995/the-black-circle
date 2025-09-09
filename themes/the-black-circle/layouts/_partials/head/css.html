@@ -6,11 +6,15 @@
 {{- end -}}
  
 {{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
+
+{{ $swiper := resources.Get "css/swiper-bundle.min.css" -}}
+<link rel="stylesheet" href="{{ $swiper.RelPermalink | relURL }}" media="screen">
  
 {{ if hugo.IsDevelopment  -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">
 {{ else -}}
   {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" media="screen" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
+
 {{ end -}}
  

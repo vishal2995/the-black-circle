@@ -1,6 +1,4 @@
-{{ $bg := resources.Get "images/holistic-background.png" }}
-
-<section id="holistic-platform" class="block platform-block position-relative">
+<section id="holistic-platform" class="block platform-block position-relative pb-0">
   <div class="container text-center" style="position: relative; z-index: 2;">
     <h2 class="mb-4">BESPOKE SOLUTIONS FOT ASSET</br>THAT NEVER SLEEP</h2>
     <div class="row step-items justify-content-center align-items-center mb-5">
@@ -81,14 +79,23 @@
           </div>
         </div>
     </div>
+  </div>
+</section>
 
-    <div class="content">
-      <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="The Black Circle" class="img-fluid">
-      <h4 class="mb-2">Unlock liquidity without letting go of your crypto.</h4>
-      <p class="small px-3 px-md-5">
-        Access institutional-grade loans collateralized by Bitcoin and other leading cryptocurrencies. Preserve ownership of your assets while unlocking liquidity to finance new investments, lifestyle needs, or yield strategies. With flexible conditions, elite custody, and white-glove service, we transform digital wealth into real-world capital without compromise.
-      </p>
-       <a href="" class="btn btn-primary">REQUEST ACCESS</a>
+<section class="block platform-cta-block pt-0">
+  <div class="block-bg">
+    <img src="{{ (resources.Get "images/crypto-bg.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 text-center text-light">
+        <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" width="140px">
+        <h4 class="mb-3">Unlock liquidity without letting go of your crypto.</h4>
+        <p> Access institutional-grade loans collateralized by Bitcoin and other leading cryptocurrencies. Preserve ownership of your assets while unlocking liquidity to finance new investments, lifestyle needs, or yield strategies. With flexible conditions, elite custody, and white-glove service, we transform digital wealth into real-world capital without compromise.</p>
+        <div class="d-flex justify-content-center pt-3">
+          <a href="#" class="btn btn-primary">REQUEST ACCESS</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

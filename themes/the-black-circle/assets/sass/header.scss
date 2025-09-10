@@ -12,7 +12,8 @@
 	margin: 0; 
 	padding: 0;
 	&.sticky-header { 
-		box-shadow: 0 0 15px rgba(0,0,0,0.10);
+		background-color: $black;
+		box-shadow: 0 0 15px rgba(255,255,255,0.10);
 	}
 	.navbar {
 		width: 100%;
@@ -25,22 +26,57 @@
 }
 
 .navbar-brand {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 	margin: 0;
 	padding: 0;
     z-index: 9;
+	@include lg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 	img {
 		width: 185px; 
+	}
+}
+
+.menu-toggle { 
+	width: 50px;
+	height: 50px;
+	border-radius: 8px;
+	background: var(--Linear-1, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
+	padding: 0; 
+	z-index: 2; 
+	display: flex; 
+	align-items: center;
+	justify-content: center; 
+	border: 0; 
+	z-index:99; 
+	transition: all 0.5s ease;
+	display: flex;
+	svg {
+		width: 30px;
+		height: 30px;
+		path {
+			fill: $white;
+		}
+	}
+	&:hover {
+		svg {
+			path {
+				fill: $secondary;
+			} 
+		}
+	}
+	@include lg {
+		display: none;
 	}
 }
 
 .navbar-menu {
 	width: 300px;
 	height: 100vh;
-	background: $primary;
+	background: $black;
 	transform: translatex(100%);
 	transition: transform 0.5s, right 0.5s;
 	padding: 0;
@@ -48,7 +84,7 @@
 	position: fixed;
 	right: -300px;
 	top: 85px;
-	@include xl {
+	@include lg {
 		width: 100%;
 		height: auto;
 		background: transparent;
@@ -64,32 +100,34 @@
 		list-style-type: none; 
 		margin: 0; 
 		padding: 0;
-		@include xl {
+		@include lg {
             width: 100%;
 			display: flex;
 			align-items: center;
             justify-content: center;
             gap: $default-base-spacer * 2;
-            
 		}
 		> li { 
-            min-width: 125px;
             position: relative;
 			border: none;
-            text-align: center;
 			padding: 0; 
 			margin: 0;
+			@include lg {
+				min-width: 135px;	
+				text-align: center;
+			}
 			@include xl {
+				min-width: 125px;
 				margin-left: $default-base-spacer;
 				margin-right: $default-base-spacer; 
 			}
             &:nth-child(2) {
-                @include xl {
+                @include lg {
                     margin-right: $default-base-spacer * 9;     
                 }    
             }
             &:nth-child(3) {
-                @include xl {
+                @include lg {
                     margin-left: $default-base-spacer * 9;     
                 }    
             }
@@ -102,13 +140,13 @@
                 text-transform: uppercase;
 				display: block;
 				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
-				@include xl {
+				@include lg {
 					padding: 0; 
 					display: inline-flex;
 				}
 				svg {
 					display: none;
-					@include xl {
+					@include lg {
 						margin-left: $default-base-spacer * 0.5;
 						display: inline-block;
 					}
@@ -182,6 +220,24 @@
 					opacity: 1;
 					visibility: visible;
 				}	
+			}
+		}
+	}
+}
+
+.open-menu {
+	.navbar-menu {
+		transform: translateX(0px);
+		transition: transform 0.5s, right 0.5s;
+		right: 0;
+		@include xl {
+			transform: translateY(100px);	
+		}
+	}
+	.menu-toggle {
+		svg {
+			path {
+				fill: $white;
 			}
 		}
 	}

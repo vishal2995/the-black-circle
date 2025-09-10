@@ -6,8 +6,19 @@
 </section> -->
 {{ $bg := resources.Get "images/eye-bg.png" }}
 
-<section id="hero-section" class="hero-section position-relative d-flex flex-column justify-content-center align-items-center text-center" style="background-image: url('{{ $bg.RelPermalink | safeURL }}');">
-  <div class="container">
+<section id="hero-section" class="hero-section position-relative d-flex flex-column justify-content-center align-items-center text-center">
+  <div class="hero-video">
+		<div class="video-box videobg bg-image" style="background-image: url('{{ $bg.RelPermalink | safeURL }}');">
+			<div class="videobg-width">
+				<div class="videobg-aspect">
+					<div class="videobg-make-height">
+						<iframe title="Latent Pictures" src="https://player.vimeo.com/video/1108095709?autoplay=1&loop=1&title=0&portrait=0&muted=1&background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>	
+					</div>	
+				</div>	
+			</div>
+		</div>	
+	</div>
+  <div class="container z-1">
     <div class="hero-logo pt-4 mb-2">
       <img src="{{ "/images/hugo-logo.png" | relURL }}" alt="{{ site.Title }}" class="img-fluid mb-4">
     </div>

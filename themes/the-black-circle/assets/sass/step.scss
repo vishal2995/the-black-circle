@@ -1,5 +1,8 @@
 .step-items {
-    padding: 0 $default-base-spacer * 5;
+    padding: 0 $default-base-spacer;
+    @include xl {
+        padding: 0 $default-base-spacer * 5;
+    }
     .step-item {
         .step-item-inner {
             width: 195px;
@@ -25,24 +28,24 @@
             h6 {
                 font-family: $body-font;
             }
-            &:hover {
-                span {
-                    opacity: 1;
-                    visibility: visible;
-                }
-                h3 {
-                    background: linear-gradient(280deg, #0C2D2A -31.79%, #B2724A 100.72%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                h6 {
-                    background: linear-gradient(277deg, #0C2D2A -67.53%, #B2724A 100.53%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
+        }
+       &.swiper-slide-active, &:hover {
+            span {
+                opacity: 1;
+                visibility: visible;
             }
+            h3 {
+                background: linear-gradient(280deg, #0C2D2A -31.79%, #B2724A 100.72%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h6 {
+                background: linear-gradient(277deg, #0C2D2A -67.53%, #B2724A 100.53%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }    
         }
     }
 }

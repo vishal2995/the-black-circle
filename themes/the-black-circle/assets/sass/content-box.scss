@@ -6,7 +6,10 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba($white, 0.2);
     .card-body {
-        padding: $default-base-spacer * 2;
+        padding: $default-base-spacer * 1.5;
+        @include xl {
+            padding: $default-base-spacer * 2;    
+        }
     }
     h5 {
         font-family: $body-font;

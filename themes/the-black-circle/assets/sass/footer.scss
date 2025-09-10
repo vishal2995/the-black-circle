@@ -1,7 +1,10 @@
 .footer {
     background: var(--black-gradient, linear-gradient(325deg, #20201E -2.33%, #0F0E0E 90.92%));
-    padding: $default-vertical-padding 0;
+    padding: ($default-base-spacer * 3) 0;
     color: $light;
+    @include xl {
+        padding: $default-vertical-padding 0;
+    }
     .footer-logo {
         img {
             width: 250px;

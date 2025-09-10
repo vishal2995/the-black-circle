@@ -1,8 +1,22 @@
-.step-items {
+.platform-inner-block {
+    position: relative;
     padding: 0 $default-base-spacer;
     @include xl {
         padding: 0 $default-base-spacer * 5;
     }
+    .swiper-button-prev, .swiper-button-next {
+        width: 45px;
+        height: 45px;
+        &::after {
+            display: none;
+        }
+        svg {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+.step-items {
     .step-item {
         .step-item-inner {
             width: 195px;
@@ -50,7 +64,27 @@
     }
 }
 
-.platform-cta-block {
+.platform-block {
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 195px;
+            height: 195px;
+            background-color: transparent;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            margin: 0 auto;
+            padding: $default-base-spacer * 1.5;   
+            color: $white;
+            opacity: 1;
+        }
+    }
+}
+
+.platform-content-block {
     .block-bg {
         opacity: 0.2;
         &::before {

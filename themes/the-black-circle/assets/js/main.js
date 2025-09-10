@@ -71,7 +71,7 @@ jQuery( document ).ready(function($) {
 		},
 		loop: true,
 		loopedSlides: 4,
-		slideToClickedSlide: true,
+
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev"
@@ -80,7 +80,6 @@ jQuery( document ).ready(function($) {
 
 	const sliderBottom = new Swiper(".platform-content-slider", {
 		slidesPerView: 1,
-		centeredSlides: true,
 		loop: true,
 		loopedSlides: 4
 	});

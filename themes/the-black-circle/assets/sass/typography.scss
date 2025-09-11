@@ -36,10 +36,10 @@ h1, .h1 {
 	font-size: $font-size-base * 1.875; 
 	line-height: 1.15;
 	font-weight: $font-weight-light;
-	@include md {
+	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 2.375;
 	} 
-	@include xl {
+	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.875;
 	} 
 }
@@ -52,11 +52,11 @@ h2, .h2 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-	@include md {
+	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 2.375;
         letter-spacing: 2.3px;
 	} 
-	@include xl {
+	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.875;
 	} 
 }
@@ -64,10 +64,10 @@ h2, .h2 {
 h3, .h3 { 
 	font-size: $font-size-base * 2;
 	line-height: 1.2;
-	@include md {
+	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 2.125;
 	} 
-	@include xl {
+	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.5;
 	} 
 }
@@ -75,17 +75,17 @@ h3, .h3 {
 h4, .h4 { 
 	font-size: $font-size-base * 1.5; 
 	line-height: 1.2;
-	@include md {
+	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 1.75; 
 	}
-	@include xl {
+	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2; 
 	} 
 }
 
 h5, .h5 { 
 	font-size: $font-size-base * 1.25; 
-	@include xl {
+	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 1.375; 
 	} 
 }

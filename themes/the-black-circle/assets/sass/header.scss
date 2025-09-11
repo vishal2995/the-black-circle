@@ -29,7 +29,7 @@
 	margin: 0;
 	padding: 0;
     z-index: 9;
-	@include lg {
+	@include media-breakpoint-up(lg) {
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -68,7 +68,7 @@
 			} 
 		}
 	}
-	@include lg {
+	@include media-breakpoint-up(lg) {
 		display: none;
 	}
 }
@@ -84,7 +84,7 @@
 	position: fixed;
 	right: -300px;
 	top: 85px;
-	@include lg {
+	@include media-breakpoint-up(lg) {
 		width: 100%;
 		height: auto;
 		background: transparent;
@@ -100,7 +100,7 @@
 		list-style-type: none; 
 		margin: 0; 
 		padding: 0;
-		@include lg {
+		@include media-breakpoint-up(lg) {
             width: 100%;
 			display: flex;
 			align-items: center;
@@ -112,22 +112,22 @@
 			border: none;
 			padding: 0; 
 			margin: 0;
-			@include lg {
+			@include media-breakpoint-up(lg) {
 				min-width: 135px;	
 				text-align: center;
 			}
-			@include xl {
+			@include media-breakpoint-up(xl) {
 				min-width: 125px;
 				margin-left: $default-base-spacer;
 				margin-right: $default-base-spacer; 
 			}
             &:nth-child(2) {
-                @include lg {
+                @include media-breakpoint-up(lg) {
                     margin-right: $default-base-spacer * 9;     
                 }    
             }
             &:nth-child(3) {
-                @include lg {
+                @include media-breakpoint-up(lg) {
                     margin-left: $default-base-spacer * 9;     
                 }    
             }
@@ -140,13 +140,13 @@
                 text-transform: uppercase;
 				display: block;
 				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
-				@include lg {
+				@include media-breakpoint-up(lg) {
 					padding: 0; 
 					display: inline-flex;
 				}
 				svg {
 					display: none;
-					@include lg {
+					@include media-breakpoint-up(lg) {
 						margin-left: $default-base-spacer * 0.5;
 						display: inline-block;
 					}
@@ -170,7 +170,7 @@
 				align-items: center;
 				justify-content: center;
 				z-index: 1;
-				@include xl {
+				@include media-breakpoint-up(xl) {
 					display: none;
 				}
 			}
@@ -187,10 +187,10 @@
 				opacity: 0;
 				visibility: hidden;
 				display: none;
-				@include sm {
+				@include media-breakpoint-up(sm) {
 					width: 325px;	
 				}
-				@include xl {
+				@include media-breakpoint-up(xl) {
 					position: absolute;
 					opacity: 0;
 					visibility: hidden;
@@ -230,7 +230,7 @@
 		transform: translateX(0px);
 		transition: transform 0.5s, right 0.5s;
 		right: 0;
-		@include xl {
+		@include media-breakpoint-up(xl) {
 			transform: translateY(100px);	
 		}
 	}

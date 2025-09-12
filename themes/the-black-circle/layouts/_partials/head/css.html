@@ -9,6 +9,9 @@
 
 {{ $swiper := resources.Get "css/swiper-bundle.min.css" -}}
 <link rel="stylesheet" href="{{ $swiper.RelPermalink | relURL }}" media="screen">
+
+{{ $aos := resources.Get "css/aos.css" -}}
+<link rel="stylesheet" href="{{ $aos.RelPermalink | relURL }}" media="screen">
  
 {{ if hugo.IsDevelopment  -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">

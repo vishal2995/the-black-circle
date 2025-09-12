@@ -17,7 +17,7 @@
 	}
 	.navbar {
 		width: 100%;
-		height: 120px;
+		height: 85px;
 		background: transparent;
 		padding: 0;
 		position: relative;
@@ -202,20 +202,24 @@
 					display: none;
 				}
 			}
-			ul.sub-menu {
+			.sub-menu {
 				width: 100%;
 				position: static;
 				left: 0;
 				top: 100%;
 				border-radius: 10px;
                 background: rgba(255, 255, 255, 0.10);
+				border: 1px solid $white;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 				opacity: 0;
 				visibility: hidden;
+				backdrop-filter: blur(30px);
 				@include media-breakpoint-up(sm) {
-					width: 325px;	
+					width: 745px;
+					display: flex;	
+					flex-wrap: wrap;
 				}
 				@include media-breakpoint-up(xl) {
 					position: absolute;
@@ -223,27 +227,50 @@
 					visibility: hidden;
 					//display: inline-block;
 					transition: all 0.5s ease;
-					top: 100%;
+					top: calc(100% + 28px);
 				}
-				li {
-					line-height: normal;
-					a {
-						display: block;
-						font-size: $font-size-base;
-						text-decoration: none; 
-						color: $white;
+				ul {
+					@include media-breakpoint-up(sm) {
+						width: 50%;
+						flex: 0 0 auto;
+						list-style-type: none;
+						margin: 0;
+						padding: $default-base-spacer * 2;
+					}	
+					li {
 						line-height: normal;
-						padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
-					}
-					&:hover, &.current-menu-item {
 						a {
-							color: $white; 
+							display: block;
+							background: transparent;
+							text-align: left;
+							font-size: $font-size-base * 1.125;
+							font-weight: $font-weight-normal;
+							text-decoration: none; 
+							color: $white;
+							line-height: normal;
+							background-clip: inherit;
+							-webkit-background-clip: inherit;
+							-webkit-text-fill-color: inherit;
+							padding: ($default-base-spacer * 0.75) 0; 
+						}
+						&:hover, &.current-menu-item {
+							a {
+								color: $white; 
+							}
+						}
+					}
+					&.right-menu-items {
+						li {
+							a {
+								font-size: $font-size-base;
+								font-weight: $font-weight-light;
+							}
 						}
 					}
 				}
 			}
 			&:hover {
-				ul.sub-menu {
+				.sub-menu {
 					opacity: 1;
 					visibility: visible;
 				}	

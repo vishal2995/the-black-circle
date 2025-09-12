@@ -41,20 +41,21 @@ Renders a menu for the given menu ID.
       >{{ $name }}</a>
       
       {{- with .Children }}
+      <div class="sub-menu">
         {{- $left := where . "Weight" "<=" 4 -}}
         {{- if gt (len $left) 0 }}
-          <ul class="sub-menu left-menu-items">
+          <ul class="left-menu-items">
             {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $left) }}
           </ul>
         {{- end }}
 
         {{- $right := where . "Weight" ">=" 5 -}}
         {{- if gt (len $right) 0 }}
-          <ul class="sub-menu right-menu-items">
+          <ul class="right-menu-items">
             {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $right) }}
           </ul>
         {{- end }}
-
+      </div>
       {{- end }}
     </li>
   {{- end }}

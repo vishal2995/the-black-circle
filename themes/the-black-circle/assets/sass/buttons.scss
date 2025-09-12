@@ -14,9 +14,6 @@
 	justify-content: space-between;
     text-transform: uppercase;
 	gap: $default-base-spacer;
-	&:hover {
-		padding-left: ($default-base-spacer * 1.5);
-	}
 }
 
 .btn-primary {

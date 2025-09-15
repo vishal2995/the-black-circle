@@ -19,13 +19,13 @@ weight = 2
   [[main]]
   parent = "solutions"
   name = "Private Banks"
-  pageRef = "/solutions/private-banks"
+  pageRef = "/solutions/private-bank-health-offices"
   weight = 2
 
   [[main]]
   parent = "solutions"
   name = "Cryptonative Organisations"
-  pageRef = "/solutions/cryptonative"
+  pageRef = "/solutions/crypto-native-organizations"
   weight = 3
 
   [[main]]
@@ -43,7 +43,7 @@ weight = 2
   [[main]]
   parent = "solutions"
   name = "Yield Strategies"
-  pageRef = "/solutions/yield-strategies"
+  pageRef = "/solutions/btc-yield-strategies"
   weight = 6
 
   [[main]]
@@ -60,7 +60,7 @@ weight = 2
 
 [[main]]
 name = "The Origin"
-pageRef = "/tags"
+pageRef = "/the-origin"
 weight = 3
 
 [[main]]

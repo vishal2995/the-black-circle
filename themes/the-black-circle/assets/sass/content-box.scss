@@ -5,6 +5,9 @@
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba($white, 0.2);
+    .main-card-heading {
+        padding: ($default-base-spacer * 2) ($default-base-spacer * 2) 0 ($default-base-spacer * 2)
+    }
     .card-body {
         padding: $default-base-spacer * 1.5;
         @include media-breakpoint-up(xl) {
@@ -39,6 +42,11 @@
 
             @include media-breakpoint-up(xl) {
                 padding-left: $default-base-spacer * 3;
+            }
+
+            ul {
+                list-style-type: square;
+                padding-left: $default-base-spacer * 1.75;
             }
         }
     }

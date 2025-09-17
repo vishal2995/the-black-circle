@@ -14,6 +14,14 @@
             padding: $default-base-spacer * 2;    
         }
 
+        .card-icon {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
         .custom-card-heading {
             border-bottom: 1px solid rgba($white, 0.25);
             padding-right: 0;

@@ -7,8 +7,8 @@
  
 {{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
 
-{{ $swiper := resources.Get "css/swiper-bundle.min.css" -}}
-<link rel="stylesheet" href="{{ $swiper.RelPermalink | relURL }}" media="screen">
+{{ $slick := resources.Get "css/slick.css" -}}
+<link rel="stylesheet" href="{{ $slick.RelPermalink | relURL }}" media="screen">
 
 {{ $aos := resources.Get "css/aos.css" -}}
 <link rel="stylesheet" href="{{ $aos.RelPermalink | relURL }}" media="screen">

@@ -37,7 +37,7 @@ weight = 2
   [[main]]
   parent = "solutions"
   name = "Bitcoin and Crypto-Backed Lending"
-  pageRef = "/solutions/bcbl"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
   weight = 5
 
   [[main]]

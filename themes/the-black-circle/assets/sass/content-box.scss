@@ -13,7 +13,6 @@
         @include media-breakpoint-up(xl) {
             padding: $default-base-spacer * 2;    
         }
-
         .card-icon {
             height: 64px;
             width: 64px;
@@ -62,6 +61,15 @@
         font-family: $body-font;
         font-weight: $font-weight-normal;
         font-size: $font-size-base * 1.25;
+    }
+    &.custom-card-style {
+        .card-body {
+            .card-icon {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+            }
+        }
     }
 }
 

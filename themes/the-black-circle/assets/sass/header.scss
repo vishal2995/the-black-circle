@@ -29,7 +29,7 @@
 	margin: 0;
 	padding: 0;
     z-index: 9;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -68,7 +68,7 @@
 			} 
 		}
 	}
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		display: none;
 	}
 }
@@ -84,7 +84,7 @@
 	position: fixed;
 	right: -300px;
 	top: 85px;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		width: 100%;
 		height: auto;
 		background: transparent;
@@ -100,7 +100,7 @@
 		list-style-type: none; 
 		margin: 0; 
 		padding: 0;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
             width: 100%;
 			display: flex;
 			align-items: center;
@@ -112,22 +112,18 @@
 			border: none;
 			padding: 0; 
 			margin: 0;
-			@include media-breakpoint-up(lg) {
-				min-width: 135px;	
-				text-align: center;
-			}
 			@include media-breakpoint-up(xl) {
 				min-width: 125px;
 				margin-left: $default-base-spacer;
 				margin-right: $default-base-spacer; 
 			}
             &:nth-child(2) {
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     margin-right: $default-base-spacer * 9;     
                 }    
             }
             &:nth-child(3) {
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(xl) {
                     margin-left: $default-base-spacer * 9;     
                 }    
             }
@@ -168,13 +164,13 @@
 				display: block;
 				cursor: pointer;
 				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
-				@include media-breakpoint-up(lg) {
+				@include media-breakpoint-up(xl) {
 					padding: 0; 
 					display: inline-flex;
 				}
 				svg {
 					display: none;
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(xl) {
 						margin-left: $default-base-spacer * 0.5;
 						display: inline-block;
 					}
@@ -207,21 +203,17 @@
 				position: static;
 				left: 0;
 				top: 100%;
-				border-radius: 10px;
                 background: rgba(255, 255, 255, 0.10);
-				border: 1px solid $white;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
-				opacity: 0;
-				visibility: hidden;
 				backdrop-filter: blur(30px);
-				@include media-breakpoint-up(sm) {
+				@include media-breakpoint-up(xl) {
 					width: 745px;
+					border: 1px solid $white;
+					border-radius: 10px;
 					display: flex;	
 					flex-wrap: wrap;
-				}
-				@include media-breakpoint-up(xl) {
 					position: absolute;
 					opacity: 0;
 					visibility: hidden;
@@ -230,7 +222,8 @@
 					top: calc(100% + 28px);
 				}
 				ul {
-					@include media-breakpoint-up(sm) {
+					padding: $default-base-spacer ($default-base-spacer * 1.5);
+					@include media-breakpoint-up(xl) {
 						width: 50%;
 						flex: 0 0 auto;
 						list-style-type: none;
@@ -251,7 +244,10 @@
 							background-clip: inherit;
 							-webkit-background-clip: inherit;
 							-webkit-text-fill-color: inherit;
-							padding: ($default-base-spacer * 0.75) 0; 
+							padding: ($default-base-spacer * 0.5) 0; 
+							@include media-breakpoint-up(xl) {
+								padding: ($default-base-spacer * 0.75) 0; 	
+							}
 						}
 						&:hover, &.current-menu-item {
 							a {

@@ -1,13 +1,16 @@
 {{ define "main" }}
 
-{{ $solutionbanner := resources.Get "images/uhnws-hero-banner-1.png" }}
+<!-- {{ $solutionbanner := resources.Get "images/uhnws-hero-banner-1.png" }} -->
 <!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
 
-<section class="block inner-hero-block big-inner-hero-block position-relative" style="background-image: url('{{ $solutionbanner.RelPermalink | safeURL }}');">
+<section class="block inner-hero-block position-relative">
+  <div class="hero-bg opacity-none">
+    <img src="{{ (resources.Get "images/uhnws-hero-banner-1.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div>
   <div class="container">
-    <div class="row justify-content-left pb-lg-3">
+    <div class="row justify-content-left pb-lg-3 pt-lg-5">
       <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-duration="500">
-          <div class="inner-hero-item ps-lg-4 pe-lg-5">
+          <div class="inner-hero-item ps-lg-4 pe-lg-5 pt-lg-5">
             <h1 class="d-inline-block text-secondary text-uppercase mb-3">UHNWIs, Digital Asset <br class="d-none d-lg-inline-block"/> Whales and Bitcoin Miners</h1>
             <p class="text-light mb-4 pb-lg-2">You've built exceptional wealth through vision, conviction, and bold decision-making. Your digital asset portfolio represents more than an investment, it's a cornerstone of your financial future. The Black Circle understands that managing wealth of your magnitude requires solutions as sophisticated as your investment strategy.</p>
             <p class="text-light">We deliver institutional-grade digital asset management exclusively for distinguished clients who demand more than traditional private banking can provide.</p>
@@ -182,11 +185,11 @@
   </div>
   <div class="container">
     <div class="w-100 call-to-action-inner p-4 p-lg-5 position-relative d-flex">
-      <div class="row align-items-center" data-aos="fade-up" data-aos-duration="500">
+      <div class="row align-items-center">
         <!-- Left Column -->
-        <div class="col-12 col-lg-6 pe-xl-5 z-1">
+        <div class="col-12 col-lg-6 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
             <h4 class="text-uppercase mb-3">Your Time to Enter the Circle</h4>
-              <p class="mb-4 text-light text-large">If you are ready to experience exclusive, tailored financial services unlike anything before, with trusted partners who listen, understand, and stand by your side to secure and amplify your wealth, then it’s time to take the next step.</p>
+              <p class="mb-4 text-light text-large">If you are ready to experience exclusive, tailored financial services unlike anything before, with trusted partners who listen, understand, and stand by your side to secure and amplify your wealth, then it's time to take the next step.</p>
               <div class="d-flex pt-4">
                 <a href="#" class="btn btn-primary">Join The Black Circle</a>
               </div>

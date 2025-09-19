@@ -94,7 +94,7 @@ weight = 4
 
 [[footer]]
 name = 'Contact'
-pageRef = '/contact'
+pageRef = '/request-access'
 weight = 5
 
  ##############################

@@ -31,7 +31,7 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <li>
+    <li class="{{ if $page.IsMenuCurrent .Menu . }}active{{ else if $page.HasMenuCurrent .Menu . }}ancestor{{ end }}">
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}

@@ -138,11 +138,11 @@
 					gap: $default-base-spacer;
 					color: #D9D9D9;
     				background: var(--Linear-1, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
-					&:hover {
-						background: var(--Linear-1, linear-gradient(285deg, #B2724A -7.62%, #B2724A 100.98%));
+					&:hover, &.active {
+						background: var(--Linear-1, linear-gradient(285deg, #B2724A -7.62%, #B2724A 100.98%)) !important;
         				color: #D9D9D9 !important;
-						background-clip: initial;
-						-webkit-text-fill-color: initial;
+						background-clip: initial !important;
+						-webkit-text-fill-color: initial !important;
 					}
 				}
 				display: flex;
@@ -173,7 +173,7 @@
 					}
 				}
 			}
-			&:hover, &.current-menu-item, &.current-menu-ancestor {
+			&:hover, &.active, &.ancestor {
 				a {
 					background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
                     background-clip: text;
@@ -258,7 +258,7 @@
 								padding: ($default-base-spacer * 0.75) 0; 	
 							}
 						}
-						&:hover, &.current-menu-item {
+						&:hover, &.active, &.ancestor {
 							a {
 								color: $primary; 
 							}

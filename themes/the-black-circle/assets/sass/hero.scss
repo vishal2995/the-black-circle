@@ -68,7 +68,8 @@
         left: 0;
         top: 0;
         @include media-breakpoint-up(xl) {
-            top: -20%; 
+            top: -20%;
+            height: auto; 
         }
         img {
             object-fit: cover;

@@ -41,32 +41,24 @@
 }
 
 .menu-toggle { 
-	width: 50px;
-	height: 50px;
 	border-radius: 8px;
 	background: var(--Linear-1, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
 	padding: 0; 
 	z-index: 2; 
-	display: flex; 
-	align-items: center;
-	justify-content: center; 
-	border: 0; 
+	border: 8px; 
 	z-index:99; 
 	transition: all 0.5s ease;
-	display: flex;
-	svg {
-		width: 30px;
-		height: 30px;
-		path {
-			fill: $white;
-		}
-	}
-	&:hover {
-		svg {
-			path {
-				fill: $secondary;
-			} 
-		}
+	padding: $default-base-spacer * 0.5;
+	.line {
+		width: 50px;
+		height: 5px;
+		background-color: $white;
+		border-radius: 2px;
+		display: block;
+		margin: ($default-base-spacer * 0.5) auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 	@include media-breakpoint-up(xl) {
 		display: none;
@@ -153,6 +145,11 @@
 						-webkit-text-fill-color: initial;
 					}
 				}
+				display: flex;
+				margin: 0 ($default-base-spacer * 1.5);
+				@include media-breakpoint-up(xl) {
+                    margin: 0;     
+                } 
 			}
 			> a { 
 				text-decoration: none; 
@@ -229,6 +226,18 @@
 						list-style-type: none;
 						margin: 0;
 						padding: $default-base-spacer * 2;
+					}
+					&:first-child {
+						padding-bottom: 0;
+						@include media-breakpoint-up(xl) {
+							padding-bottom: $default-base-spacer * 2;
+						}
+					}
+					& + ul {
+						padding-top: 0;
+						@include media-breakpoint-up(xl) {
+							padding-top: $default-base-spacer * 2;
+						}
 					}	
 					li {
 						line-height: normal;
@@ -285,9 +294,21 @@
 		}
 	}
 	.menu-toggle {
-		svg {
-			path {
-				fill: $white;
+		.line {
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(1) {
+				-webkit-transform: translateY(13px) rotate(45deg);
+				-ms-transform: translateY(13px) rotate(45deg);
+				-o-transform: translateY(13px) rotate(45deg);
+				transform: translateY(13px) rotate(45deg);
+			}
+			&:nth-child(3) {
+				-webkit-transform: translateY(-13px) rotate(-45deg);
+				-ms-transform: translateY(-13px) rotate(-45deg);
+				-o-transform: translateY(-13px) rotate(-45deg);
+				transform: translateY(-13px) rotate(-45deg);
 			}
 		}
 	}

@@ -40,12 +40,16 @@
 }
 
 .inner-hero-block {
-    min-height: 550px;
+    min-height: 500px;
     display: flex;
     align-items: end;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    padding-top: $default-base-spacer * 5.313;
+    @include media-breakpoint-up(xl) {
+        min-height: 550px;
+    }
     &:before {
         height: 100%;
         width: 100%;
@@ -57,11 +61,19 @@
         z-index: 0;
     }
     .hero-bg {
-        opacity: 0.25;
         width: 100%;
+        height: 100%;
+        opacity: 0.25;
         position: absolute;
         left: 0;
-        top: -20%;
+        top: 0;
+        @include media-breakpoint-up(xl) {
+            top: -20%; 
+        }
+        img {
+            object-fit: cover;
+            object-position: center center;
+        }
         &:before {
             width: 100%;
             height: 100%;

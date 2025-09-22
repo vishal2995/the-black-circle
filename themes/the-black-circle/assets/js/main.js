@@ -41,6 +41,7 @@ jQuery( document ).ready(function($) {
 		slidesToScroll: 1,
 		asNavFor: '.platform-content-slider',
 		dots: false,
+		infinite: true,
 		focusOnSelect: true,
 		prevArrow: prevArrow,
     	nextArrow: nextArrow,

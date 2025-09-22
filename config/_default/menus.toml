@@ -30,32 +30,32 @@ weight = 2
 
   [[main]]
   parent = "solutions"
-  name = "Tailored Solutions"
-  pageRef = "/solutions/tailored-solutions"
-  weight = 4
-
-  [[main]]
-  parent = "solutions"
   name = "Bitcoin and Crypto-Backed Lending"
   pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
-  weight = 5
+  weight = 4
 
   [[main]]
   parent = "solutions"
   name = "Yield Strategies"
   pageRef = "/solutions/btc-yield-strategies"
-  weight = 6
+  weight = 5
 
   [[main]]
   parent = "solutions"
   name = "Custody"
   pageRef = "/solutions/custody"
-  weight = 7
+  weight = 6
 
   [[main]]
   parent = "solutions"
   name = "Trading Desk"
   pageRef = "/solutions/trading-desk"
+  weight = 7
+
+  [[main]]
+  parent = "solutions"
+  name = "Tailored Solutions"
+  pageRef = "/solutions/tailored-solutions"
   weight = 8
 
 [[main]]

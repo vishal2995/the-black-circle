@@ -10,6 +10,7 @@
 // Then add additional custom code here
 
 @import "mixins.scss";
+@import "modal.scss";
 @import "base.scss";
 @import "buttons.scss"; 
 @import "typography.scss";
@@ -19,4 +20,3 @@
 @import "step.scss";
 @import "call-to-action.scss";
 @import "content-box.scss";
-@import "modal.scss";

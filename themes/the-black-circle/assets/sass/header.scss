@@ -290,6 +290,22 @@
 							}
 						}
 					}
+					&.right-menu-items {
+						position: relative;
+						&::before {
+							width: 1px;
+							background-color: rgba(255,255,255,0.15);
+							content: "";
+							position: absolute;
+							left: -4px;
+							top: $default-base-spacer;
+							bottom: $default-base-spacer;	
+							@include media-breakpoint-up(xl) {
+								top: $default-base-spacer * 2;
+								bottom: $default-base-spacer * 2;	
+							}
+						}
+					}
 				}
 			}
 			&:hover {

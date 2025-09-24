@@ -37,6 +37,16 @@
         -webkit-text-fill-color: transparent;
         display: inline-block;
     }
+    .herofade {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 1);
+        opacity: 0;
+        top: 0;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+    }
 }
 
 .inner-hero-block {

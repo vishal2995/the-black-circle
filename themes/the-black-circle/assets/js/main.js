@@ -83,4 +83,59 @@ jQuery( document ).ready(function($) {
 
 	AOS.init({once: true});
 
+	function setCountryRestrictionCookie() {
+          setCookie('country_restriction', true);
+		  
+        }
+
+        function goBack() {
+          if (document.referrer && document.referrer !== window.location.href) {
+            window.history.back();
+          } else {
+            window.close();
+            window.location.href = "https://www.google.com/";
+          }
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          let expires = "expires="+ d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+          let name = cname + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+		
+		$(".btn-continue").click(function () {
+			setCountryRestrictionCookie();
+			   document.getElementById('myButton').addEventListener('click', function () {
+				var modalEl = document.getElementById('accessModalPopup');
+				var modal = bootstrap.Modal.getInstance(modalEl); 
+				
+				if (!modal) {
+					modal = new bootstrap.Modal(modalEl);
+				}
+				
+				modal.hide();
+			});
+		});
+
+		$(".btn-back").click(function () {
+			goBack();
+		})
+
 });

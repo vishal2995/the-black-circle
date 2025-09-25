@@ -41,8 +41,8 @@
 }
 
 .menu-toggle { 
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 35px;
 	border-radius: 0;
 	background: transparent;
 	padding: 0; 
@@ -52,8 +52,8 @@
 	transition: all 0.5s ease;
 	padding: 0;
 	.line {
-		width: 40px;
-		height: 4px;
+		width: 30px; 
+		height: 1px;
 		background-color: $white;
 		border-radius: 2px;
 		display: block;
@@ -116,16 +116,6 @@
 				align-items: center;
 				gap: $default-base-spacer * 0.75;
 			}
-			svg {
-				position: absolute;
-				right: $default-base-spacer;
-				top: $default-base-spacer;
-				@include media-breakpoint-up(xl) {
-					position: relative;
-					right: 0;
-					top: 0;
-				}
-			}
             &:nth-child(2) {
                 @include media-breakpoint-up(xl) {
                     margin-right: $default-base-spacer * 9;     
@@ -153,15 +143,20 @@
 					text-transform: uppercase;
 					gap: $default-base-spacer;
 					color: #D9D9D9;
-    				background: var(--Linear-1, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
-					&:hover, &.active {
-						background: var(--Linear-1, linear-gradient(285deg, #B2724A -7.62%, #B2724A 100.98%)) !important;
-        				color: #D9D9D9 !important;
+    				background-image: linear-gradient(to right, #B2724A 0%, #0C2D2A  50%, #B2724A  100%);
+					background-size: 200% auto;
+				}
+				&:hover, &.active {
+					a {
+						background-image: linear-gradient(to right, #B2724A 0%, #0C2D2A  50%, #B2724A  100%);
+						background-position: right center !important;
+						color: #D9D9D9 !important;
 						background-clip: initial !important;
 						-webkit-text-fill-color: initial !important;
 					}
 				}
 				display: flex;
+				justify-content: center;
 				margin: 0 ($default-base-spacer * 1.5);
 				@include media-breakpoint-up(xl) {
                     margin: 0;     
@@ -176,12 +171,14 @@
 				letter-spacing: 0.3px;
 				line-height: normal;
                 text-transform: uppercase;
+				text-align: center;
 				display: block;
 				cursor: pointer;
 				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
 				@include media-breakpoint-up(xl) {
 					padding: 0; 
 					display: inline-flex;
+					text-align: left;
 				}
 				svg {
 					display: none;
@@ -193,7 +190,7 @@
 			}
 			&:hover, &.active, &.ancestor {
 				a {
-					background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
+					background-image: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -201,16 +198,18 @@
 			}
 			span {
 				position: absolute;
-				width: 50px;
-				height: 50px;
+				width: 48px;
+				height: 48px;
 				right: 0;
-				top: 0;
-				display: flex;
+				top:0;
+				display: none;
 				align-items: center;
 				justify-content: center;
 				z-index: 1;
 				@include media-breakpoint-up(xl) {
-					display: none;
+					top:50%;
+					transform: translateY(-50%);	
+					display: flex;
 				}
 			}
 			.sub-menu {
@@ -218,13 +217,14 @@
 				position: static;
 				left: 0;
 				top: 100%;
-                background: rgba(255, 255, 255, 0.10);
+                background: rgba(255, 255, 255, 0.03);
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 				backdrop-filter: blur(30px);
 				@include media-breakpoint-up(xl) {
 					width: 745px;
+					background: rgba(255, 255, 255, 0.10);
 					border: 1px solid $white;
 					border-radius: 10px;
 					display: flex;	
@@ -232,12 +232,12 @@
 					position: absolute;
 					opacity: 0;
 					visibility: hidden;
-					//display: inline-block;
 					transition: all 0.5s ease;
 					top: calc(100% + 28px);
 				}
 				ul {
-					padding: $default-base-spacer ($default-base-spacer * 1.5);
+					list-style-type: none;
+					padding: $default-base-spacer;
 					@include media-breakpoint-up(xl) {
 						width: 50%;
 						flex: 0 0 auto;
@@ -272,8 +272,10 @@
 							-webkit-background-clip: inherit;
 							-webkit-text-fill-color: inherit;
 							padding: ($default-base-spacer * 0.5) 0; 
+							text-align: center;
 							@include media-breakpoint-up(xl) {
 								padding: ($default-base-spacer * 0.75) 0; 	
+								text-align: left;
 							}
 						}
 						&:hover, &.active, &.ancestor {
@@ -333,16 +335,16 @@
 				opacity: 0;
 			}
 			&:nth-child(1) {
-				-webkit-transform: translateY(11px) rotate(45deg);
-				-ms-transform: translateY(11px) rotate(45deg);
-				-o-transform: translateY(11px) rotate(45deg);
-				transform: translateY(11px) rotate(45deg);
+				-webkit-transform: translateY(9px) rotate(45deg);
+				-ms-transform: translateY(9px) rotate(45deg);
+				-o-transform: translateY(9px) rotate(45deg);
+				transform: translateY(9px) rotate(45deg);
 			}
 			&:nth-child(3) {
-				-webkit-transform: translateY(-13px) rotate(-45deg);
-				-ms-transform: translateY(-13px) rotate(-45deg);
-				-o-transform: translateY(-13px) rotate(-45deg);
-				transform: translateY(-13px) rotate(-45deg);
+				-webkit-transform: translateY(-9px) rotate(-45deg);
+				-ms-transform: translateY(-9px) rotate(-45deg);
+				-o-transform: translateY(-9px) rotate(-45deg);
+				transform: translateY(-9px) rotate(-45deg);
 			}
 		}
 	}

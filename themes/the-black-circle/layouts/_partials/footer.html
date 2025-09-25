@@ -4,25 +4,28 @@
     <!-- Logo and Description -->
     <div class="col-12 col-lg-3 offset-xl-1 pb-4">
       <div class="footer-logo">
-        <img src="{{ (resources.Get "images/logo-gradient.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid">
+        <a href="/">
+          <img src="{{ (resources.Get "images/logo-gradient.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid d-none d-xl-block">
+          <img src="{{ (resources.Get "images/logo-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid mb-4 d-block d-xl-none">
+        </a>
       </div>
     </div>
     
     <!-- Sitemap -->
-    <div class="col-12 col-md-3 col-lg-2 mb-3">
+    <div class="col-12 col-md-4 col-lg-2 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">SITEMAP</h6>
         {{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
     </div>
         
     <!-- Terms & Follow Us -->
-    <div class="col-12 col-md-3 col-lg-2 mb-3">
+    <div class="col-12 col-md-4 col-lg-2 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">TERMS</h6>
          {{ partial "menu.html" (dict "menuID" "terms" "page" .) }}
       </div>
 
-    <div class="col-12 col-md-6 col-lg-5 col-xl-4 mb-5">
+    <div class="col-12 col-md-4 col-lg-5 col-xl-4 mb-4 mb-lg-5 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">FOLLOW US</h6>
-      <div class="d-flex gap-3 align-items-center">
+      <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
         <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 28 30" fill="none">
             <g clip-path="url(#clip0_79_16)">
@@ -60,7 +63,7 @@
         </form>
       </div> -->
     </div>
-    <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-4">
+    <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-4 text-center text-md-start">
       <p class="small mt-3"><em>The Black Circle provides sophisticated digital asset management services exclusively to qualified high-net-worth individuals and institutions. All investments involve risk, including potential loss of principal. Past performance does not guarantee future results. Securities offered through licensed partners.</em></p>
       <p class="small mt-2 mb-0">&copy; {{ now.Year }} MLG UK Ltd. All rights reserved. <a href="https://www.wearegrizzly.com/" target="_blank">Web Design Grizzly</a>.</p>
     </div>

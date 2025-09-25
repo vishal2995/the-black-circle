@@ -8,6 +8,10 @@
     .footer-logo {
         img {
             width: 250px;
+            margin: 0 auto;
+            @include media-breakpoint-up(xl) {
+                margin: 0;
+            }
         }
     }
     a {

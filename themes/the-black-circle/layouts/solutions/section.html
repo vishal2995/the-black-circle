@@ -1,11 +1,14 @@
 {{ define "main" }}
 
-{{ $solutionbanner := resources.Get "images/solution-hero-banner.png" }}
+<!-- {{ $solutionbanner := resources.Get "images/solution-hero-banner.png" }} -->
 <!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
 
-<section class="block inner-hero-block position-relative" style="background-image: url('{{ $solutionbanner.RelPermalink | safeURL }}');">
+<section class="block inner-hero-block position-relative">
+  <div class="hero-bg">
+    <img src="{{ (resources.Get "images/solution-hero-banner.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+  </div>
   <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3">
+    <div class="row justify-content-center pb-lg-3 pt-5">
       <div class="col-lg-10 col-12" data-aos="fade-up" data-aos-duration="500">
           <div class="inner-hero-item">
             <h1 class="text-secondary text-uppercase mb-3">Tailored digital wealth solutions designed for those who demand more</h1>
@@ -23,10 +26,10 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 text-secondary text-uppercase text-center mb-4 pb-lg-4">Core Offerings</h2>
+        <h2 class="h4 text-secondary text-uppercase text-center mb-5 pb-lg-3">Core Offerings</h2>
       </div>
     </div>
-    <div class="row g-4">
+    <div class="row row-gap-4">
       <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
         <div class="card custom-card text-light">
           <div class="card-body d-flex flex-column justify-content-between">
@@ -76,10 +79,10 @@
     <div class="row justify-content-center mb-5">
       <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
         <h2 class="text-secondary text-uppercase text-center mb-3">Created to serve those who shape the future of digital wealth</h2>
-        <p class="text-light text-center">The Black Circle was built with a singular purpose: to serve the individuals and organizations driving the next era of capital. Every service is designed to protect, activate, and elevate wealth without compromise.</p>
+        <p class="text-light text-center mb-0">The Black Circle was built with a singular purpose: to serve the individuals and organizations driving the next era of capital. Every service is designed to protect, activate, and elevate wealth without compromise.</p>
       </div>
     </div>
-    <div class="row g-4">
+    <div class="row row-gap-4">
       <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
         <div class="card custom-card text-light">
           <div class="card-body d-flex flex-column justify-content-between">

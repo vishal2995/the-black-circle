@@ -34,9 +34,9 @@ jQuery( document ).ready(function($) {
 
 	// Menu
 	var windowWidth = $(window).width();
-	$('.navbar-menu .menu  li span').click(function (e) {
+	$('.navbar-menu .menu > li > span').click(function (e) {
 		e.preventDefault();
-		var $ul = $(this).siblings('ul.sub-menu');
+		var $ul = $(this).siblings('.sub-menu');
 		if ($ul.length > 0) {
 			$ul.slideToggle(300, 'linear');
 			$(".sub-menu").not($ul).slideUp(300, 'linear');
@@ -101,6 +101,12 @@ jQuery( document ).ready(function($) {
 		arrows: false,
 		fade: true,
 		asNavFor: '.platform-slider'
+	});
+
+	$('.platform-slider .slick-slide').hover(function() {
+		if($(window).width() >= 1199){
+			$(this).trigger('click');
+		}
 	});
 
 	AOS.init({once: true});

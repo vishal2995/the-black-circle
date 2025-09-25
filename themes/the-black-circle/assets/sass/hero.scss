@@ -17,12 +17,16 @@
         top: 0;
         z-index: 1;
     }
-    .hero-video {
+    .hero-pic, .hero-video {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        img {
+            object-fit: cover;
+            object-position: center center;
+        }
     }
     .hero-logo {
         img {
@@ -44,7 +48,6 @@
         opacity: 0;
         top: 0;
         position: absolute;
-        z-index: 2;
         left: 0;
     }
 }
@@ -52,7 +55,6 @@
 .inner-hero-block {
     min-height: 500px;
     display: flex;
-    align-items: end;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -77,10 +79,12 @@
         position: absolute;
         left: 0;
         top: 0;
-        @include media-breakpoint-up(xl) {
-            top: -20%;
-            height: auto; 
+        &.height-auto {
+            @include media-breakpoint-up(xl) {
+                height: auto;
+            }
         }
+        
         img {
             object-fit: cover;
             object-position: center center;
@@ -96,6 +100,9 @@
         }
         &.opacity-none {
             opacity: 1;
+        }
+        &.opacity-half {
+            opacity: 0.75;
         }
     }
     &.big-inner-hero-block { 

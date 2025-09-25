@@ -78,24 +78,19 @@ pageRef = '/'
 weight = 1
 
 [[footer]]
-name = 'About Us'
-pageRef = '/about-us'
+name = 'Solutions'
+pageRef = '/solutions'
 weight = 2
 
 [[footer]]
-name = 'Sectors'
-pageRef = '/sectors'
+name = 'The Origin'
+pageRef = '/the-origin'
 weight = 3
 
 [[footer]]
-name = 'Projects'
-pageRef = '/projects'
-weight = 4
-
-[[footer]]
-name = 'Contact'
+name = 'Request Access'
 pageRef = '/request-access'
-weight = 5
+weight = 4
 
  ##############################
 # Footer Menu Terms

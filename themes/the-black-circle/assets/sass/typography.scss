@@ -1,3 +1,8 @@
+html {
+	@include media-breakpoint-between(xl, xxl) {
+		font-size: 13px;
+	}
+}
 body, p {
 	font-family: $body-font;
 	font-weight: $font-weight-light;
@@ -18,7 +23,9 @@ body, p {
 }
 
 .text-large, .text-large p {
-	font-size: $font-size-base * 1.125;
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 1.125;
+	}
 }
 
 a {
@@ -69,6 +76,7 @@ h3, .h3 {
 	} 
 	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.5;
+		line-height: 1;
 	} 
 }
 

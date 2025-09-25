@@ -7,7 +7,7 @@
 {{ $bg := resources.Get "images/eye-bg.png" }}
 
 <section id="hero-section" class="hero-section position-relative d-flex flex-column justify-content-center align-items-center text-center">
-  <div class="hero-video">
+  <!-- <div class="hero-video">
 		<div class="video-box videobg bg-image" style="background-image: url('{{ $bg.RelPermalink | safeURL }}');">
 			<div class="videobg-width">
 				<div class="videobg-aspect">
@@ -17,8 +17,11 @@
 				</div>	
 			</div>
 		</div>	
-	</div>
-  <div class="container z-1">
+	</div> -->
+  <div class="hero-pic">
+    <img src="{{ (resources.Get "images/eye-bg.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+  </div>
+  <div class="container z-2">
     <div class="hero-logo pt-4 mb-2" data-aos="fade-up" data-aos-duration="500">
       <img src="{{ (resources.Get "images/logo-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid mb-4">
     </div>

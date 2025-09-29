@@ -5,7 +5,7 @@
         border-radius: 24px;
         overflow: hidden;
         @include media-breakpoint-up(xl) {
-            min-height: 430px;   
+            min-height: 350px;   
         }
         h4 {
             color: $primary;

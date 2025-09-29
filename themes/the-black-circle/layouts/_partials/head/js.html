@@ -14,6 +14,10 @@
   <script src="{{ .RelPermalink }}"></script>
 {{- end }}
 
+{{- with resources.Get "js/validation.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{- end }}
+
 {{- with resources.Get "js/main.js" }}
   {{- $opts := dict
     "minify" (not hugo.IsDevelopment)

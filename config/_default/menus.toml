@@ -98,7 +98,7 @@ weight = 4
 
 [[terms]]
 name = 'Terms & Conditions'
-pageRef = '/'
+pageRef = '/terms'
 weight = 1
 
 [[terms]]

@@ -1,3 +1,3 @@
 ---
-title: "Terms The Black Circle"
+title: "Terms | The Black Circle"
 ---

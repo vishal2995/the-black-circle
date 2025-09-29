@@ -24,11 +24,12 @@
   <div class="block-bg bottom-0 opacity-low">
     <img src="{{ (resources.Get "images/contact-form-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
   </div>
-  <div class="container">
+  <div class="container position-relative z-1">
     <div class="row justify-content-center mb-5 pb-lg-3">
       <div class="col-12 col-lg-8 text-center text-light">
-         <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-0">Contact Form</h2>
-        </div>
+        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-0">Contact Form</h2>
+        {{ partial "contact-form.html" . }}
+      </div>
     </div>
   </div>
 </section>
@@ -43,7 +44,7 @@
         <p class="text-light mb-0">At The Black Circle, we serve a select group of individuals, family offices, and institutions who meet our internal thresholds and the regulatory standards of the Abu Dhabi Global Market (ADGM) under FSRA supervision. We ensure every client is classified and onboarded in accordance with FSRA rules, including full AML/KYC procedures and CRS/FATCA compliance.</p>
       </div>
     </div>
-     <div class="row justify-content-center">
+     <!-- <div class="row justify-content-center">
       <div class="col-12 col-lg-12 col-xl-12">
         <div class="row row-gap-4">
           <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-duration="600">
@@ -81,7 +82,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 

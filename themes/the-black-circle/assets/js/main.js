@@ -111,8 +111,8 @@ jQuery( document ).ready(function($) {
 
 	AOS.init({once: true});
 
-	var modalEl = document.getElementById('accessModalPopup');
-    var modal = new bootstrap.Modal(modalEl);
+	// var modalEl = document.getElementById('accessModalPopup');
+    // var modal = new bootstrap.Modal(modalEl);
 
     // Show popup only if cookie is not set
     if (!getCookie("country_restriction")) {

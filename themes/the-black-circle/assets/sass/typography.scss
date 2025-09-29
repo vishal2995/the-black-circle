@@ -8,6 +8,16 @@ body, p {
 	font-weight: $font-weight-light;
 	line-height: 1.75;
 }
+ul, ol {
+	li {
+		font-family: $body-font;
+		font-weight: $font-weight-light;
+		line-height: 1.75;
+	}
+}
+strong {
+	font-weight: $font-weight-bold;
+}
 .text-primary {
     background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
     background-clip: text;

@@ -124,6 +124,15 @@
             font-weight: $font-weight-light;
         }
     }
+    &.page-404 {
+        .hero-bg {
+            opacity: 0.05;
+        }
+        h1 {
+            font-size: $font-size-base * 7; 
+            font-weight: $font-weight-medium;
+        }
+    }
 }
 
 

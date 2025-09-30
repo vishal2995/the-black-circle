@@ -7,3 +7,7 @@ theme = 'the-black-circle'
   [module.hugoVersion]
     extended = false
     min = '0.146.0'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

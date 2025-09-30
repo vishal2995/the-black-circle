@@ -101,13 +101,3 @@ name = 'Terms & Conditions'
 pageRef = '/terms'
 weight = 1
 
-[[terms]]
-name = 'Cookies'
-pageRef = '/about-us'
-weight = 2
-
-[[terms]]
-name = 'Privacy policy'
-pageRef = '/sectors'
-weight = 3
-
